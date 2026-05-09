@@ -1,3 +1,4 @@
+console.log("Java Script Running");
 // ============================================
 // PORTFOLIO SCRIPT
 // ============================================
@@ -39,12 +40,12 @@ const projects = [
         link: "#",
         tags: ["HTML", "CSS", "JavaScript"],
     },
-    // {
-    //     title: "Next Project",
-    //     description: "Coming soon — I'll add the next thing I build right here.",
-    //     link: "https://github.com/yourusername/next-project",
-    //     tags: ["JavaScript"],
-    // },
+    {
+        title: "Kovaaks Tracker - WIP",
+        description: "A web application for tracking KovaaK’s aim training benchmarks, scores, and progression over time.",
+        link: "https://codewithty.github.io/kovaaks-tracker/",
+        tags: ["HTML", "JavaScript"],
+    },
 ];
 
 const grid = document.querySelector("#projects-grid");
