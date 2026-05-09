@@ -46,6 +46,12 @@ const projects = [
         link: "https://codewithty.github.io/kovaaks-tracker/",
         tags: ["HTML", "JavaScript"],
     },
+    {
+        title: "Magik Trading Card",
+        description: "A simple web page with Magik as a psudeo trading card",
+        link: "https://codewithty.github.io/-Magik-trading-card-tyler/",
+        tags: ["HTML", "CSS"],
+    }
 ];
 
 const grid = document.querySelector("#projects-grid");

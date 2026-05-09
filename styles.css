@@ -11,19 +11,19 @@
     --surface:      #ffffff;
     --text:         #1a1a2e;
     --text-muted:   #0f0500;
-    --accent:       #dddad7;
-    --accent-hover: #eaeaf5;
+    --accent:       #aa0ae9;
+    --accent-hover: #000007;
     --border:       #000000;
     --shadow:       0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 body.dark-mode {
-    --bg:           #0f0f1a;
+    --bg:           #131333;
     --surface:      #1a1a2e;
-    --text:         #f0f0f5;
+    --text:         #00ffdd;
     --text-muted:   #a0a0b8;
-    --accent:       #818cf8;
-    --accent-hover: #c7d2fe;
+    --accent:       #aa0ae9;
+    --accent-hover: #0303f7;
     --border:       #2a2a40;
     --shadow:       0 2px 12px rgba(0, 0, 0, 0.35);
 }
@@ -140,8 +140,8 @@ a:focus-visible {
 }
 
 .hero__avatar {
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 4px solid var(--surface);
     box-shadow: var(--shadow);
@@ -290,8 +290,6 @@ footer {
     .nav__links {
         gap: 1rem;
         flex-wrap: wrap;
-        accent:var(--accent)
-        accent-hover:
     }
     .hero__content {
         padding: 2.5rem 1.25rem 3.5rem;
