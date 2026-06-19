@@ -1,9 +1,6 @@
-console.log("Java Script Running");
 // ============================================
 // PORTFOLIO SCRIPT
 // ============================================
-
-console.log("Portfolio script loaded ✅");
 
 
 // ============================================
@@ -19,7 +16,6 @@ if (themeToggle) {
         document.body.classList.toggle("dark-mode");
         const isDark = document.body.classList.contains("dark-mode");
         themeToggle.textContent = isDark ? "☀️" : "🌙";
-        console.log(`Theme toggled → ${isDark ? "dark" : "light"}`);
     });
 } else {
     console.warn("No #theme-toggle button found.");
@@ -34,22 +30,31 @@ if (themeToggle) {
 
 const projects = [
     {
-        title: "Personal Portfolio",
+        title: "MyInternLog",
         description:
-            "This very page — built from scratch using semantic HTML, CSS Grid + custom properties, and vanilla JavaScript. My first lab in the cohort.",
-        link: "#",
+            "An iOS application built with SwiftUI that helps interns track accomplishments, reflections, learning progress, and resume-ready achievements throughout an internship.",
+        link: "https://github.com/codewithty/MyInternLog",
+        tags: ["Swift", "SwiftUI"],
+    },
+    {
+        title: "Habit Tracker",
+        description:
+            "A web application for tracking daily habits and practicing consistent progress over time.",
+        link: "https://github.com/Jonathon10/HABIT_TRACKER",
         tags: ["HTML", "CSS", "JavaScript"],
     },
     {
-        title: "Kovaaks Tracker - WIP",
-        description: "A web application for tracking KovaaK’s aim training benchmarks, scores, and progression over time.",
-        link: "https://codewithty.github.io/kovaaks-tracker/",
-        tags: ["HTML", "JavaScript"],
+        title: "KovaaK's Tracker",
+        description:
+            "A web application for tracking KovaaK's aim training benchmarks, scores, and progression over time.",
+        link: "https://github.com/codewithty/kovaaks-tracker",
+        tags: ["HTML", "CSS", "JavaScript"],
     },
     {
-        title: "Magik Trading Card",
-        description: "A simple web page with Magik as a psudeo trading card",
-        link: "https://codewithty.github.io/-Magik-trading-card-tyler/",
+        title: "Portfolio Website",
+        description:
+            "This portfolio website, built from scratch with semantic HTML, CSS, and vanilla JavaScript to showcase my projects and growth.",
+        link: ".",
         tags: ["HTML", "CSS"],
     }
 ];
@@ -76,12 +81,16 @@ if (grid) {
             tagList.appendChild(tag);
         });
 
-        const link = document.createElement("a");
-        link.className = "project-card__link";
-        link.href = project.link;
-        link.textContent = "View project →";
+        card.append(title, description, tagList);
 
-        card.append(title, description, tagList, link);
+        if (project.link) {
+            const link = document.createElement("a");
+            link.className = "project-card__link";
+            link.href = project.link;
+            link.textContent = "View project →";
+            card.appendChild(link);
+        }
+
         grid.appendChild(card);
     });
 }
