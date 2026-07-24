@@ -38,6 +38,7 @@ const projects = [
             "Daily Reflections built on a relational data model (Reflection → ReflectionAnswer) with cascade delete",
             "Study Queue for saving topics to learn and marking them reviewed",
             "Photo attachments imported via PhotosUI and stored locally on device",
+            "SwiftData schema migration with zero data loss across model versions",
             "Built using an AI-assisted development workflow (Claude Code)",
         ],
         link: "https://github.com/codewithty/MyInternLog",
