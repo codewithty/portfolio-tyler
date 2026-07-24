@@ -32,9 +32,16 @@ const projects = [
     {
         title: "MyInternLog",
         description:
-            "An iOS application built with SwiftUI that helps interns track accomplishments, reflections, learning progress, and resume-ready achievements throughout an internship.",
+            "A native iOS app for logging internship accomplishments, reflections, and study topics. Fully local by design — all data is stored on device with SwiftData, with no account or backend required.",
+        details: [
+            "Quick Notes with a tag-based categorization system",
+            "Daily Reflections built on a relational data model (Reflection → ReflectionAnswer) with cascade delete",
+            "Study Queue for saving topics to learn and marking them reviewed",
+            "Photo attachments imported via PhotosUI and stored locally on device",
+            "Built using an AI-assisted development workflow (Claude Code)",
+        ],
         link: "https://github.com/codewithty/MyInternLog",
-        tags: ["Swift", "SwiftUI"],
+        tags: ["Swift", "SwiftUI", "SwiftData", "PhotosUI"],
     },
     {
         title: "Habit Tracker",
@@ -46,7 +53,7 @@ const projects = [
     {
         title: "KovaaK's Tracker",
         description:
-            "A web application for tracking KovaaK's aim training benchmarks, scores, and progression over time.",
+            "A web app for logging KovaaK's aim-training sessions: record scenario scores by category, group them into completed sessions, and review past sessions persisted with localStorage.",
         link: "https://github.com/codewithty/kovaaks-tracker",
         tags: ["HTML", "CSS", "JavaScript"],
     },
@@ -81,7 +88,20 @@ if (grid) {
             tagList.appendChild(tag);
         });
 
-        card.append(title, description, tagList);
+        card.append(title, description);
+
+        if (project.details) {
+            const detailList = document.createElement("ul");
+            detailList.className = "project-card__details";
+            project.details.forEach((item) => {
+                const detail = document.createElement("li");
+                detail.textContent = item;
+                detailList.appendChild(detail);
+            });
+            card.appendChild(detailList);
+        }
+
+        card.appendChild(tagList);
 
         if (project.link) {
             const link = document.createElement("a");

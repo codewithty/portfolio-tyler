@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tyler Smith — Aspiring Software Engineer</title>
+    <title>Tyler Smith — Software Engineering Student &amp; iOS Developer</title>
+    <meta name="description" content="Portfolio of Tyler Smith — Programming & Software Development student at LaGuardia Community College, research intern, and iOS developer.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codewithty.github.io/portfolio-tyler/">
+    <meta property="og:title" content="Tyler Smith — Software Engineering Student & iOS Developer">
+    <meta property="og:description" content="Portfolio of Tyler Smith — Programming & Software Development student at LaGuardia Community College, research intern, and iOS developer.">
+    <meta property="og:image" content="https://codewithty.github.io/portfolio-tyler/headshot.png">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +28,10 @@
             <span class="nav__logo"></span>
             <div class="nav__links">
                 <a href="#about">About</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
                 <a href="TylerSmith_Resume.pdf" download>Resume</a>
                 <a href="#contact">Contact</a>
                 <button id="theme-toggle" aria-label="Toggle light and dark mode">🌙</button>
@@ -49,10 +60,45 @@
             </p>
             <p>
                 I'm currently a Summer Research Intern at the Air Force Research
-                Laboratory (AFRL), where I'm gaining real-world experience and learning
-                how software skills connect to professional research and development
-                work.
+                Laboratory (AFRL), where I work on a small research team building a
+                measurement and scoring framework that evaluates the security posture
+                of AI agent systems against a formal security assurance standard. I'm
+                also an iOS Developer Intern at What's The Move, an early-stage
+                nightlife-discovery startup, where I contribute Swift and SwiftUI
+                features to a production iOS app.
             </p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+
+            <article class="experience__entry">
+                <h3>Air Force Research Laboratory (AFRL) — Summer Research Intern</h3>
+                <p class="experience__meta">Rome, NY · May 2026 – Present</p>
+                <p>
+                    Member of a small research team building a measurement and scoring
+                    framework to evaluate the security posture of AI agent systems
+                    against a formal security assurance standard.
+                </p>
+                <ul class="experience__bullets">
+                    <li>Build a scoring and measurement module in Python implementing a formal severity-scoring specification</li>
+                    <li>Develop an automated verification test suite validating module outputs against hand-computed specification values</li>
+                    <li>Presented technical work to a research audience of faculty and staff</li>
+                    <li>Collaborate on a small research team using shared repositories and code review</li>
+                </ul>
+            </article>
+
+            <article class="experience__entry">
+                <h3>What's The Move (WTM) — iOS Developer Intern</h3>
+                <p class="experience__meta">2026 – Present</p>
+                <p>
+                    What's The Move is an early-stage nightlife-discovery startup.
+                </p>
+                <ul class="experience__bullets">
+                    <li>Contribute Swift and SwiftUI features to a production iOS app</li>
+                    <li>Work from assigned tickets in a real team workflow: task assignment, code review, and pull-request merges</li>
+                </ul>
+            </article>
         </section>
 
         <section id="skills" class="section">
@@ -64,10 +110,15 @@
                 <li>JavaScript</li>
                 <li>Git &amp; GitHub</li>
                 <li>Responsive Design</li>
+                <li>Swift</li>
                 <li>SwiftUI</li>
+                <li>SwiftData</li>
+                <li>PhotosUI</li>
+                <li>Python</li>
                 <li>Java</li>
                 <li>C++</li>
                 <li>VS Code</li>
+                <li>Xcode</li>
             </ul>
         </section>
 
@@ -75,6 +126,14 @@
             <h2>Projects</h2>
             <p>A growing collection of projects I've built while learning.</p>
             <div id="projects-grid" class="projects"></div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education &amp; Credentials</h2>
+            <article class="experience__entry">
+                <h3>LaGuardia Community College (CUNY)</h3>
+                <p class="experience__meta">A.A.S., Programming &amp; Software Development — in progress</p>
+            </article>
         </section>
 
         <section id="contact" class="section">
