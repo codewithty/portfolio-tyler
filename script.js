@@ -47,16 +47,26 @@ const projects = [
     {
         title: "Habit Tracker",
         description:
-            "A web application for tracking daily habits and practicing consistent progress over time.",
+            "A team capstone habit-tracking web app: sign in, track daily habits with streaks and personal bests, and see a month calendar colored by completion.",
+        details: [
+            "Built by a team of six — React 19 + Vite frontend with a Node.js/Express backend for auth and daily quotes",
+            "My contributions: initial backend API endpoints, health endpoints and port configuration, and app layout updates",
+            "One-click habit presets, daily progress stats, and localStorage persistence",
+        ],
         link: "https://github.com/Jonathon10/HABIT_TRACKER",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["React", "Vite", "Node.js", "Express"],
     },
     {
         title: "KovaaK's Tracker",
         description:
-            "A web app for logging KovaaK's aim-training sessions: record scenario scores by category, group them into completed sessions, and review past sessions persisted with localStorage.",
+            "A web app for logging KovaaK's aim-training sessions, built with vanilla JavaScript and dynamic DOM rendering.",
+        details: [
+            "Structured entry form with validation: scenario, score, category, and subcategory",
+            "Session workflow — build up a current session, then complete it with a date and session length",
+            "Session history persisted in localStorage, re-rendered on page load, with per-session delete",
+        ],
         link: "https://github.com/codewithty/kovaaks-tracker",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["HTML", "CSS", "JavaScript", "localStorage"],
     },
     {
         title: "Portfolio Website",
