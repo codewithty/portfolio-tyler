@@ -4,171 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tyler Smith — Software Engineering Student &amp; iOS Developer</title>
-    <meta name="description" content="Portfolio of Tyler Smith — Programming & Software Development student at LaGuardia Community College, research intern, and iOS developer.">
+    <title>Tyler Smith | iOS Developer &amp; CS Student</title>
+    <meta name="description" content="Tyler Smith is a Computer Science student at LaGuardia Community College and an iOS Developer Intern at What's The Move, building SwiftUI features for a live events app.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codewithty.github.io/portfolio-tyler/">
-    <meta property="og:title" content="Tyler Smith — Software Engineering Student & iOS Developer">
-    <meta property="og:description" content="Portfolio of Tyler Smith — Programming & Software Development student at LaGuardia Community College, research intern, and iOS developer.">
+    <meta property="og:title" content="Tyler Smith | iOS Developer &amp; CS Student">
+    <meta property="og:description" content="Computer Science student and iOS Developer Intern at What's The Move. Previously a research intern at the Air Force Research Laboratory.">
     <meta property="og:image" content="https://codewithty.github.io/portfolio-tyler/headshot.png">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="hero">
-        <nav class="nav">
-            <span class="nav__logo"></span>
+        <nav class="nav" aria-label="Main">
+            <a class="nav__name" href="#">Tyler Smith</a>
             <div class="nav__links">
-                <a href="#about">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="TylerSmith_Resume.pdf" download>Resume</a>
-                <a href="#contact">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle light and dark mode">🌙</button>
+                <a href="#skills">Skills</a>
+                <a href="TylerSmith_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+                <button id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button>
             </div>
         </nav>
 
-        <div class="hero__content">
-            <img class="hero__avatar"
-                 src="headshot.png"
-                 alt="Tyler Smith headshot">
-            <h1 class="hero__name">Tyler Smith</h1>
-            <p class="hero__tagline">
-                Software engineering student · AFRL research intern · iOS developer at What's The Move.
-            </p>
+        <div class="hero__inner">
+            <div class="hero__intro">
+                <img class="hero__avatar" src="headshot.png" alt="Tyler Smith" width="88" height="88">
+                <h1 class="hero__name">Tyler Smith</h1>
+                <p class="hero__role">iOS developer and Computer Science student in New York</p>
+                <p class="hero__blurb">
+                    I build SwiftUI features for What's The Move, a live nightlife-discovery app,
+                    and spent this past summer on an AI security research team at the
+                    Air Force Research Laboratory.
+                </p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="TylerSmith_Resume.pdf" target="_blank" rel="noopener">View resume</a>
+                    <a class="button" href="https://github.com/codewithty" target="_blank" rel="noopener">GitHub</a>
+                    <a class="button" href="https://linkedin.com/in/tylersmith777" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Lock screen: each notification is something I shipped -->
+            <div class="lockscreen" aria-label="Recent work, shown as phone notifications">
+                <p class="lockscreen__clock" aria-hidden="true">9:41</p>
+                <ul class="notifications">
+                    <li class="notification">
+                        <span class="notification__icon notification__icon--wtm" aria-hidden="true">W</span>
+                        <div>
+                            <p class="notification__app">What's The Move</p>
+                            <p class="notification__title">Event ticketing</p>
+                            <p class="notification__body">Ticket picker, Stripe checkout, and QR tickets working in testing.</p>
+                        </div>
+                    </li>
+                    <li class="notification">
+                        <span class="notification__icon notification__icon--wtm" aria-hidden="true">W</span>
+                        <div>
+                            <p class="notification__app">What's The Move</p>
+                            <p class="notification__title">Shipped followers-only posts</p>
+                            <p class="notification__body">Enforced on the backend with a Postgres row-level security policy.</p>
+                        </div>
+                    </li>
+                    <li class="notification">
+                        <span class="notification__icon notification__icon--wtm" aria-hidden="true">W</span>
+                        <div>
+                            <p class="notification__app">What's The Move</p>
+                            <p class="notification__title">Bug fixed</p>
+                            <p class="notification__body">Follower counts corrected on 39 of 154 profiles.</p>
+                        </div>
+                    </li>
+                    <li class="notification">
+                        <span class="notification__icon notification__icon--afrl" aria-hidden="true">AF</span>
+                        <div>
+                            <p class="notification__app">AFRL</p>
+                            <p class="notification__title">41 tests passing</p>
+                            <p class="notification__body">On the Python scoring module I built for an AI security study.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="main">
+
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm Tyler Smith, a Programming &amp; Software Development student at
-                LaGuardia Community College. I'm working toward becoming a software
-                engineer by building projects, strengthening my fundamentals, and
-                learning through hands-on experience.
-            </p>
-            <p>
-                I'm currently a Summer Research Intern at the Air Force Research
-                Laboratory (AFRL), where I work on a small research team focused on
-                AI software assurance and security, applying cybersecurity concepts
-                to evaluate the trustworthiness of AI systems. I'm also an iOS
-                Developer Intern at What's The Move, an early-stage nightlife-discovery
-                startup, where I contribute to a production Swift and SwiftUI iOS app
-                through a ticket-based team workflow.
-            </p>
+            <h2>About</h2>
+            <div class="prose">
+                <p>
+                    Hi, I'm Tyler Smith, a Computer Science student at LaGuardia Community
+                    College. I'm working toward becoming a software engineer by building
+                    projects, strengthening my fundamentals, and learning through hands-on
+                    experience.
+                </p>
+                <p>
+                    I'm an iOS Developer Intern at What's The Move, an early-stage
+                    nightlife-discovery startup, where I contribute to a production Swift and
+                    SwiftUI app through a ticket-based team workflow with code review. This
+                    past summer I was a Research Intern at the Air Force Research Laboratory
+                    (AFRL), on a small team focused on AI software assurance and security.
+                </p>
+            </div>
         </section>
 
         <section id="experience" class="section">
             <h2>Experience</h2>
 
-            <article class="experience__entry">
-                <h3>Air Force Research Laboratory (AFRL) — Summer Research Intern</h3>
-                <p class="experience__meta">Rome, NY · June 2026 – Present</p>
-                <p>
-                    Member of a small research team working on AI software assurance
-                    and security — applying cybersecurity concepts to evaluate the
-                    trustworthiness of AI systems.
-                </p>
-                <ul class="experience__bullets">
-                    <li>Grade measured outcomes of evaluation scenarios against a structured severity rubric under a blind scoring protocol, compare them with independently predicted severity ratings, and co-author the project's threat model</li>
-                    <li>Set up and troubleshot a Python evaluation harness in an isolated virtual environment, resolving package-installation and API-authentication issues by tracing failures through the request stack</li>
-                    <li>Extended the framework with a custom evaluation scenario — porting and refactoring a multi-tool Python module suite, fixing cross-module imports, and registering it into the framework's versioned loader</li>
-                    <li>Presented technical work to a research audience of faculty and staff</li>
-                </ul>
+            <article class="entry">
+                <p class="entry__dates">Jul 2026 to now</p>
+                <div class="entry__body">
+                    <h3>iOS Development Intern</h3>
+                    <p class="entry__org">What's The Move<span class="entry__place">Remote</span></p>
+                    <ul>
+                        <li>Ship iOS features and bug fixes to a live SwiftUI and Supabase app with real users, working through a PR review workflow with the founder and a small engineering team.</li>
+                        <li>Own end-to-end development of in-app event ticketing (in progress): SwiftUI purchase flow, Stripe Connect payments and host onboarding, and the Supabase data model behind them.</li>
+                        <li>Diagnosed a broken follow-request flow caused by a masked SwiftUI conditional in the view layer and a missing Row-Level Security insert policy on the backend, and fixed both layers.</li>
+                        <li>Traced inflated follower counts to a duplicate pair of database triggers double-counting every follow (39 of 154 profiles affected), removed the redundant trigger, and recomputed counts from source data.</li>
+                        <li>Restricted post visibility to followers only by rebuilding a Postgres Row-Level Security policy on the posts table.</li>
+                        <li>Built an event photo wall supporting photo and video posts with attendee-only visibility, spanning SwiftUI views and Supabase data modeling.</li>
+                    </ul>
+                </div>
             </article>
 
-            <article class="experience__entry">
-                <h3>What's The Move (WTM) — iOS Developer Intern</h3>
-                <p class="experience__meta">Remote · July 2026 – Present</p>
-                <p>
-                    What's The Move is an early-stage nightlife-discovery startup.
-                </p>
-                <ul class="experience__bullets">
-                    <li>Contribute to a production Swift and SwiftUI iOS app through the team's ticket-based workflow: assigned tasks, code review, and pull-request merges</li>
-                </ul>
+            <article class="entry">
+                <p class="entry__dates">Jun to Aug 2026</p>
+                <div class="entry__body">
+                    <h3>Summer Research Intern</h3>
+                    <p class="entry__org">Air Force Research Laboratory, Information Directorate<span class="entry__place">Rome, NY</span></p>
+                    <ul>
+                        <li>Owned the measurement component of a three-person AI security research project, building a Python scoring module and per-objective assessment checkers from framework specifications.</li>
+                        <li>Wrote 41 passing tests, including a full input-space sweep proving the scoring module could not produce an out-of-range result.</li>
+                        <li>Built the study's core comparison artifact and threat model, and designed a scoring method where two team members scored independently before reconciling.</li>
+                        <li>Presented the work to a PhD faculty audience as part of a three-component team talk, cleared for public release through AFRL Public Affairs.</li>
+                    </ul>
+                    <p class="entry__note">Administered through the Research Foundation for CUNY.</p>
+                </div>
             </article>
-        </section>
-
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <p>Tools and technologies I've worked with so far:</p>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Git &amp; GitHub</li>
-                <li>Responsive Design</li>
-                <li>Swift</li>
-                <li>SwiftUI</li>
-                <li>SwiftData</li>
-                <li>PhotosUI</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>VS Code</li>
-                <li>Xcode</li>
-            </ul>
         </section>
 
         <section id="projects" class="section">
             <h2>Projects</h2>
-            <p>A growing collection of projects I've built while learning.</p>
-            <div id="projects-grid" class="projects"></div>
+            <div id="projects-list" class="projects"></div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <dl class="skills">
+                <div class="skills__group">
+                    <dt>iOS</dt>
+                    <dd>Swift, SwiftUI, SwiftData, PhotosUI, Xcode, XCTest</dd>
+                </div>
+                <div class="skills__group">
+                    <dt>Backend</dt>
+                    <dd>Supabase, PostgreSQL, Row-Level Security, Stripe Connect, REST APIs</dd>
+                </div>
+                <div class="skills__group">
+                    <dt>Languages</dt>
+                    <dd>Swift, Python, Java, JavaScript, SQL, C++</dd>
+                </div>
+                <div class="skills__group">
+                    <dt>Tools</dt>
+                    <dd>Git, GitHub pull request workflow, React, HTML and CSS, VS Code</dd>
+                </div>
+            </dl>
         </section>
 
         <section id="education" class="section">
-            <h2>Education &amp; Credentials</h2>
+            <h2>Education</h2>
 
-            <article class="experience__entry">
-                <h3>LaGuardia Community College (CUNY)</h3>
-                <p class="experience__meta">A.A.S., Programming &amp; Software Development · New York, NY · Expected May 2027</p>
-                <ul class="experience__bullets">
-                    <li>Relevant coursework: Data Structures &amp; Algorithms, Object-Oriented Programming (Java), C++ Programming, iOS App Development, Web Development</li>
-                </ul>
+            <article class="entry">
+                <p class="entry__dates">Expected Jun 2027</p>
+                <div class="entry__body">
+                    <h3>LaGuardia Community College (CUNY)</h3>
+                    <p class="entry__org">A.S., Computer Science<span class="entry__place">Long Island City, NY</span></p>
+                    <p>Coursework: Data Structures and Algorithms, Object-Oriented Programming (Java), C++ Programming, iOS App Development, Web Development</p>
+                </div>
             </article>
 
-            <article class="experience__entry">
-                <h3>Tech Talent Pipeline Residency Program — Participant</h3>
-                <p class="experience__meta">April 2026 – Present</p>
-                <ul class="experience__bullets">
-                    <li>Selected for a competitive CUNY career-readiness program focused on technical preparation and software career pathways</li>
-                    <li>Completing intensive software engineering coursework and expanding a portfolio of independent projects alongside program mentorship</li>
-                </ul>
-            </article>
-
-            <article class="experience__entry">
-                <h3>Certifications</h3>
-                <p class="experience__meta">Anthropic Academy · June 2026</p>
-                <ul class="experience__bullets">
-                    <li>AI Fluency: Framework &amp; Foundations</li>
-                    <li>Claude 101</li>
-                </ul>
+            <article class="entry">
+                <p class="entry__dates">Completed 2026</p>
+                <div class="entry__body">
+                    <h3>Programs and certificates</h3>
+                    <ul>
+                        <li>NYC Tech Talent Pipeline Residency, LaGuardia CC: technical training cohort, completed Oct 2026</li>
+                        <li>Aspire Leaders Program, Aspire Institute: leadership development, completed 2026</li>
+                        <li>Anthropic Academy: AI Fluency: Framework &amp; Foundations, and Claude 101 (Jun 2026)</li>
+                    </ul>
+                </div>
             </article>
         </section>
 
-        <section id="contact" class="section">
+        <section id="contact" class="section contact">
             <h2>Contact</h2>
-            <ul class="contact">
-                <li>📧 <a href="mailto:tyler88967@gmail.com">tyler88967@gmail.com</a></li>
-                <li>🐙 <a href="https://github.com/codewithty" target="_blank" rel="noopener">github.com/codewithty</a></li>
-                <li>💼 <a href="https://linkedin.com/in/tylersmith777" target="_blank" rel="noopener">linkedin.com/in/tylersmith777</a></li>
+            <p class="contact__lead">The fastest way to reach me is email.</p>
+            <a class="contact__email" href="mailto:tyler88967@gmail.com">tyler88967@gmail.com</a>
+            <ul class="contact__links">
+                <li><a href="https://github.com/codewithty" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/tylersmith777" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="TylerSmith_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Tyler Smith. Built from scratch.</p>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Tyler Smith. Built with HTML, CSS, and JavaScript.</p>
     </footer>
 
     <script src="script.js"></script>
