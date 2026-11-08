@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34553581/README.md)
 # Tyler Smith: Portfolio
 
 Personal site for Tyler Smith, iOS developer and Computer Science student at LaGuardia Community College (CUNY).
